@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/db_transformers
+    username: root
+    password: 123456
+
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .htm
+    cache: false
+    mode: HTML5
+    encoding: UTF-8
+    content-type: application/json
+    check-template-location: true
+
+mybatis:
+  config-location: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath:mybatis/mapper/*.xml
+  type-aliases-package: com.andy.transformers.pojo
+
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+  params: count
